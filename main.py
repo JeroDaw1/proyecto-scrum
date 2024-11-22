@@ -1,34 +1,34 @@
-print('¡Bienvenid@!\n')
-print('Operaciones de calculadora que puedes realizar:')
-print('1. Suma')
-print('2. Resta')
-print('3. Multiplicacion')
+from addition import *
+
+print('Welcome!\n')
+print('Calculator operations you can perform:')
+print('1. Addition')
+print('2. Subtraction')
+print('3. Multiplication')
 print('4. Division')
-print('5. Agregar rango')
-print('6. Contador de números')
-print('7. Tabla de multiplicar')
-print('8. Potencias')
-print('9. Sumar a 2N1')
-print('10. Sumar a N')
-print('11. Temperaturas')
-print('12. Salir')
+print('5. Add range')
+print('6. Counting numbers')
+print('7. Multiplication Table')
+print('8. Powers')
+print('9. SumTo2N1')
+print('10. SumToN')
+print('11. Temperatures')
+print('12. Exit')
 
 option = -1
 while option <= 0 or option > 12:
   try:
-    option = int(input('Elige una opción: '))
+    option = int(input('Choose an option: '))
+
     if option < 1 or option > 12:
-      print('Error: Opción invalida. Introduce una opción entre 1 y 12')
+      print('Error: Invalid option. Enter an option between 1 and 12')
+
       continue
   except ValueError:
-    print('Error: Opción invalida')
+    print('Error: Invalid option')
 
   if option == 1:
-    try:
-      print('Suma')
-    except ValueError:
-      print('Error: No se puede sumar')
-
+    addition()
   elif option == 2:
     try:
       print('Resta')
