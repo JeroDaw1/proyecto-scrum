@@ -18,12 +18,19 @@ print('12. Exit')
 option = -1
 while option <= 0 or option > 12:
   try:
-    option = int(input('Choose an option: '))
+    option = input('Choose an option: ')
+
+    if option != option.strip():
+      print('Error: Invalid option. Enter an option between 1 and 12')
+      option = -1
+      continue
+
+    option = int(option)
 
     if option < 1 or option > 12:
       print('Error: Invalid option. Enter an option between 1 and 12')
-
       continue
+
   except ValueError:
     print('Error: Invalid option')
 

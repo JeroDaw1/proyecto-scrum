@@ -1,7 +1,7 @@
 def addition():
   try:
     number1 = input('Enter the first number: ')
-    while not number1.isdigit():  # Checks if the input is a positive integer
+    while not (number1.lstrip('-').isdigit() and (number1[0] == '-' or number1)):  # Checks if the input is an integer
       print('Error: The first number must be a positive integer')
       number1 = input('Enter the first number: ')
 
