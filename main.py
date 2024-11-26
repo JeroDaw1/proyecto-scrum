@@ -1,5 +1,6 @@
 from addition import *
 from substraction import *
+from multiplication import *
 
 print('Welcome!\n')
 print('Calculator operations you can perform:')
@@ -39,13 +40,8 @@ while option <= 0 or option > 12:
     addition()
   elif option == 2:
     substraction()
-
   elif option == 3:
-    try:
-      print('Multiplicacion')
-    except ValueError:
-      print('Error: No se puede multiplicar')
-
+    multiplication()
   elif option == 4:
     try:
       print('Division')
