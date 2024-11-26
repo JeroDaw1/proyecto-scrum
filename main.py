@@ -1,4 +1,5 @@
 from addition import *
+from substraction import *
 
 print('Welcome!\n')
 print('Calculator operations you can perform:')
@@ -37,10 +38,7 @@ while option <= 0 or option > 12:
   if option == 1:
     addition()
   elif option == 2:
-    try:
-      print('Resta')
-    except ValueError:
-      print('Error: No se puede restar')
+    substraction()
 
   elif option == 3:
     try:
