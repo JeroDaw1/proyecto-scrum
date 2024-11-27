@@ -3,6 +3,7 @@ from substraction import *
 from multiplication import *
 from division import *
 from add_range import *
+from counting_numbers import *
 
 print('Welcome!\n')
 print('Calculator operations you can perform:')
@@ -49,11 +50,7 @@ while option <= 0 or option > 12:
   elif option == 5:
     addRange()
   elif option == 6:
-    try:
-      print('Contador de números')
-    except ValueError:
-      print('Error: No se puede contar')
-
+    countingNumbers()
   elif option == 7:
     try:
       print('Tabla de multiplicar')
