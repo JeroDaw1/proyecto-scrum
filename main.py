@@ -22,24 +22,26 @@ print('11. Temperatures')
 print('12. Exit')
 
 option = -1
-while option <= 0 or option > 12:
+while option < 1 or option > 12:
   try:
-    option = input('Choose an option: ')
+    option = input('Choose an option: ').strip()  # strip to remove leading/trailing spaces
 
-    if option != option.strip():
-      print('Error: Invalid option. Enter an option between 1 and 12')
+    if not option:  # If the input is empty (user presses Enter without typing)
+      print('Error: You must choose an option between 1 and 12.')
       option = -1
       continue
-
+    
+    # Check if the input is a valid integer
     option = int(option)
 
     if option < 1 or option > 12:
-      print('Error: Invalid option. Enter an option between 1 and 12')
+      print('Error: Invalid option. Enter a number between 1 and 12.')
       continue
 
   except ValueError:
-    print('Error: Invalid option')
+    print('Error: Invalid option. Please enter a valid number.')
 
+  # Handle each option accordingly
   if option == 1:
     addition()
   elif option == 2:
@@ -56,27 +58,27 @@ while option <= 0 or option > 12:
     multTable()
   elif option == 8:
     try:
-      print('Potencias')
+      print('Powers')
     except ValueError:
-      print('Error: No se puede potenciar')
+      print('Error: Cannot perform exponentiation.')
 
   elif option == 9:
     try:
-      print('Sumar a 2N1')
+      print('SumTo2N1')
     except ValueError:
-      print('Error: No se puede sumar')
+      print('Error: Cannot perform summation.')
 
   elif option == 10:
     try:
-      print('Sumar a N')
+      print('SumToN')
     except ValueError:
-      print('Error: No se puede sumar')
+      print('Error: Cannot perform summation.')
 
   elif option == 11:
     try:
-      print('Temperaturas')
+      print('Temperatures')
     except ValueError:
-      print('Error: No se puede sumar')
+      print('Error: Cannot handle temperatures.')
 
   elif option == 12:
-    print('Saliendo...')
+    print('Exiting...')
