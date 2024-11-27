@@ -5,6 +5,7 @@ from division import *
 from add_range import *
 from counting_numbers import *
 from mult_table import *
+from powers import *
 
 print('Welcome!\n')
 print('Calculator operations you can perform:')
@@ -57,11 +58,7 @@ while option < 1 or option > 12:
   elif option == 7:
     multTable()
   elif option == 8:
-    try:
-      print('Powers')
-    except ValueError:
-      print('Error: Cannot perform exponentiation.')
-
+    powers()
   elif option == 9:
     try:
       print('SumTo2N1')
