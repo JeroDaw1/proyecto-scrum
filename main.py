@@ -4,6 +4,7 @@ from multiplication import *
 from division import *
 from add_range import *
 from counting_numbers import *
+from mult_table import *
 
 print('Welcome!\n')
 print('Calculator operations you can perform:')
@@ -52,11 +53,7 @@ while option <= 0 or option > 12:
   elif option == 6:
     countingNumbers()
   elif option == 7:
-    try:
-      print('Tabla de multiplicar')
-    except ValueError:
-      print('Error: No se puede multiplicar')
-
+    multTable()
   elif option == 8:
     try:
       print('Potencias')
