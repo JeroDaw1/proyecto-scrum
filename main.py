@@ -8,6 +8,7 @@ from mult_table import *
 from powers import *
 from sumto2n1 import *
 from sumToN import *
+from temperatures import *
 
 print('Welcome!\n')
 print('Calculator operations you can perform:')
@@ -66,10 +67,7 @@ while option < 1 or option > 12:
   elif option == 10:
     sumToN()
   elif option == 11:
-    try:
-      print('Temperatures')
-    except ValueError:
-      print('Error: Cannot handle temperatures.')
+    temperatures()
 
   elif option == 12:
     print('Exiting...')
