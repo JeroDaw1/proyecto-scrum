@@ -4,7 +4,15 @@ def countingNumbers():
   while True:
     try:
       # Get a number from the user
-      number = int(input("Introduce a number (0 to exit): "))
+      number = input("Introduce a number (0 to exit): ")
+      
+      # Check if the number contains spaces or tabulations
+      if ' ' in number or '\t' in number:
+        print("¡Error! No se permiten espacios o tabulaciones.")
+        continue
+      
+      # Try converting the input to an integer
+      number = int(number)
       
       # If the number is 0, we break the loop
       if number == 0:
@@ -19,4 +27,3 @@ def countingNumbers():
   
   # We show the amount of numbers entered, excluding the zero
   print(f"You have entered {counter} numbers.")
-
