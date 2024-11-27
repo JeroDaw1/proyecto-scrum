@@ -7,6 +7,7 @@ from counting_numbers import *
 from mult_table import *
 from powers import *
 from sumto2n1 import *
+from sumToN import *
 
 print('Welcome!\n')
 print('Calculator operations you can perform:')
@@ -63,11 +64,7 @@ while option < 1 or option > 12:
   elif option == 9:
     sumTo2N1()
   elif option == 10:
-    try:
-      print('SumToN')
-    except ValueError:
-      print('Error: Cannot perform summation.')
-
+    sumToN()
   elif option == 11:
     try:
       print('Temperatures')
