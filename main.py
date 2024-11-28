@@ -34,6 +34,10 @@ while option < 1 or option > 12:
       print('Error: You must choose an option between 1 and 12.')
       option = -1
       continue
+
+    if not option.isdigit():
+      option = -1
+      raise ValueError('You must enter a number.')
     
     # Check if the input is a valid integer
     option = int(option)
@@ -43,7 +47,7 @@ while option < 1 or option > 12:
       continue
 
   except ValueError:
-    print('Error: Invalid option. Please enter a valid number.')
+    print('Error: Invalid option. Enter a number between 1 and 12.')
 
   # Handle each option accordingly
   if option == 1:
@@ -68,6 +72,6 @@ while option < 1 or option > 12:
     sumToN()
   elif option == 11:
     temperatures()
-
   elif option == 12:
     print('Exiting...')
+    break
