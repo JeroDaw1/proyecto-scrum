@@ -9,11 +9,12 @@ def temperatures():
   for hour in hours:
     while True:
       userInput = input(f"Temperature at {hour}:00: ").strip()
-      if userInput.isdigit():
-        temperatureList.append(int(userInput))
+      try:
+        temperature = int(userInput)
+        temperatureList.append(temperature)
         break
-      else:
-        print("Invalid input. Please enter a positive integer.")
+      except ValueError:
+        print("Invalid input. Please enter a valid integer (negative, zero, or positive).")
 
   # Calculate average, maximum, and minimum temperature
   average = sum(temperatureList) / len(temperatureList)
